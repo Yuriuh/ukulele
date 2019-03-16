@@ -1,5 +1,7 @@
 # vue-yui
 
+Author：Yuriuh
+
 ## Project setup
 ```
 npm install
