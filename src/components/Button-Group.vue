@@ -6,7 +6,14 @@
 
 <script>
 export default {
-  
+  mounted () {
+    for (let node of this.$el.children) {
+      let name = node.nodeName.toLowerCase()
+      if (name !== 'button') {
+        console.warn(`y-button-group 的子元素应该全是 y-button，但是你写的是 ${node.nodeName}`)
+      }
+    }
+  }
 }
 </script>
 
@@ -16,7 +23,10 @@ export default {
   vertical-align: middle;
   > .y-button {
     border-radius: 0;
-    margin-left: -1px;
+    &:not(:first-child) {
+      // 为啥我要 -2px 可以不重叠
+      margin-left: -2px;
+    }
     &:first-child {
       border-top-left-radius: var(--border-radius);
       border-bottom-left-radius: var(--border-radius);
