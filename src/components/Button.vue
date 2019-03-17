@@ -7,6 +7,7 @@
       <use :xlink:href="`#i-${icon}`"></use>
     </svg> -->
     <y-icon v-if="icon" class="icon" :name="icon"></y-icon>
+    <y-icon class="loading" name="loading"></y-icon>
     <!-- slot 不能加 class, 所以包一层 div -->
     <div class="content">
       <slot></slot>
@@ -38,6 +39,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .y-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -78,9 +87,8 @@ export default {
       margin-left: .1em;
     }
   }
-}
-.icon {
-  width: 1em;
-  height: 1em;
+  .loading {
+    animation: spin 1.4s infinite linear;
+  }
 }
 </style>
