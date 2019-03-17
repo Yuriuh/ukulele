@@ -1,27 +1,33 @@
 <template>
   <div id="app">
-    <y-button></y-button>
+    <y-button icon="down" icon-position="left">
+      按钮1
+    </y-button>
+    <y-button icon="down" icon-position="right">
+      按钮2
+    </y-button>
+    <y-button icon="down">
+      按钮3
+    </y-button>
   </div>
 </template>
 
 <script>
-import YButton from './components/Button.vue'
 export default {
   name: "app",
-  components: {
-    YButton
-  }
-};
+  components: {}
+}
 </script>
 
 <style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothi: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  margin-left: 120px;
 }
 * {
   margin: 0;
@@ -41,22 +47,8 @@ export default {
 body {
   font-size: var(--font-size);
 }
-.y-button {
-  font-size: var(--font-size);
-  height: var(--button-height);
-  padding: 0 1em;
-  font: inherit;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  background: var(--button-bg);
-}
-.y-button:hover {
-  border-color: var(--border-color-hover);
-}
-.y-button:active {
-  background-color: var(--button-active-bg);
-}
-.y-button {
-  outline: none;
+.icon {
+  width: 1em;
+  height: 1em;
 }
 </style>
