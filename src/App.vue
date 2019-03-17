@@ -21,7 +21,12 @@
     >
       按钮
     </y-button>
-    <y-icon name="down"></y-icon>
+
+    <y-button-group>
+      <y-button icon="back">上一页</y-button>
+      <y-button icon="right" icon-position="right">下一页</y-button>
+    </y-button-group>
+    
   </div>
 </template>
 
