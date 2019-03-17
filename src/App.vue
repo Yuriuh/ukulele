@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <y-button icon="down" icon-position="left">
+    <y-button icon="settings" icon-position="left">
       按钮1
     </y-button>
-    <y-button icon="down" icon-position="right">
+    <y-button icon="settings" icon-position="right">
       按钮2
     </y-button>
-    <y-button icon="down">
+    <y-button icon="settings">
       按钮3
     </y-button>
+    <y-icon name="down"></y-icon>
   </div>
 </template>
 
@@ -46,9 +47,5 @@ export default {
 }
 body {
   font-size: var(--font-size);
-}
-.icon {
-  width: 1em;
-  height: 1em;
 }
 </style>

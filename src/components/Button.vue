@@ -3,9 +3,10 @@
   <!-- <button class="y-button" :class="{'undefined': true}"> -->
   <!-- <button class="y-button" :class="{'left': true}"> -->
   <!-- <button class="y-button" :class="{'right': true}"> -->
-    <svg v-if="icon" class="icon">
+    <!-- <svg v-if="icon" class="icon">
       <use :xlink:href="`#i-${icon}`"></use>
-    </svg>
+    </svg> -->
+    <y-icon v-if="icon" :name="icon"></y-icon>
     <!-- slot 不能加 class, 所以包一层 div -->
     <div class="content">
       <slot></slot>
