@@ -25,7 +25,7 @@ export default {
     border-radius: 0;
     &:not(:first-child) {
       // 为啥我要 -2px 可以不重叠
-      margin-left: -2px;
+      margin-left: -1px;
     }
     &:first-child {
       border-top-left-radius: var(--border-radius);

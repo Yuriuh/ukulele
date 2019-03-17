@@ -7,6 +7,7 @@
     >
       按钮
     </y-button>
+
     <y-button
       :loading="loading2"
       icon="settings" icon-position="right"
@@ -14,6 +15,7 @@
     >
       按钮
     </y-button>
+
     <y-button
       :loading="loading3"
       icon="settings"
@@ -27,7 +29,6 @@
       <y-button>更多</y-button>
       <y-button icon="right" icon-position="right">下一页</y-button>
     </y-button-group>
-    
   </div>
 </template>
 
@@ -49,13 +50,7 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothi: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  margin-left: 120px;
+  margin-left: 150px;
 }
 * {
   margin: 0;
