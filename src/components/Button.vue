@@ -6,7 +6,7 @@
     <!-- <svg v-if="icon" class="icon">
       <use :xlink:href="`#i-${icon}`"></use>
     </svg> -->
-    <y-icon v-if="icon" :name="icon"></y-icon>
+    <y-icon v-if="icon" class="icon" :name="icon"></y-icon>
     <!-- slot 不能加 class, 所以包一层 div -->
     <div class="content">
       <slot></slot>
