@@ -1,13 +1,25 @@
 <template>
   <div id="app">
-    <y-button icon="settings" icon-position="left">
-      按钮1
+    <y-button
+      :loading="loading1"
+      icon-position="left"
+      @click="loading1 = !loading1"
+    >
+      按钮
     </y-button>
-    <y-button icon="settings" icon-position="right">
-      按钮2
+    <y-button
+      :loading="loading2"
+      icon="settings" icon-position="right"
+      @click="loading2 = !loading2"
+    >
+      按钮
     </y-button>
-    <y-button icon="settings">
-      按钮3
+    <y-button
+      :loading="loading3"
+      icon="settings"
+      @click="loading3 = !loading3"
+    >
+      按钮
     </y-button>
     <y-icon name="down"></y-icon>
   </div>
@@ -16,7 +28,16 @@
 <script>
 export default {
   name: "app",
-  components: {}
+  components: {
+
+  },
+  data () {
+    return {
+      loading1: true,
+      loading2: false,
+      loading3: true
+    }
+  }
 }
 </script>
 

@@ -1,13 +1,17 @@
 <template>
-  <button class="y-button" :class="{[`icon-${iconPosition}`]: true}">
+  <button
+    class="y-button"
+    :class="{[`icon-${iconPosition}`]: true}"
+    @click="$emit('click')"
+  >
   <!-- <button class="y-button" :class="{'undefined': true}"> -->
   <!-- <button class="y-button" :class="{'left': true}"> -->
   <!-- <button class="y-button" :class="{'right': true}"> -->
     <!-- <svg v-if="icon" class="icon">
       <use :xlink:href="`#i-${icon}`"></use>
     </svg> -->
-    <y-icon v-if="icon" class="icon" :name="icon"></y-icon>
-    <y-icon class="loading" name="loading"></y-icon>
+    <y-icon v-if="icon && !loading" class="icon" :name="icon"></y-icon>
+    <y-icon v-if="loading" class="loading icon" name="loading"></y-icon>
     <!-- slot 不能加 class, 所以包一层 div -->
     <div class="content">
       <slot></slot>
@@ -20,6 +24,10 @@ export default {
   // props: ['icon', 'iconPosition']
   props: {
     icon: {},
+    loading: {
+      type: Boolean,
+      default: false
+    },
     iconPosition: {
       type: String,
       default: 'left',
