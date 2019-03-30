@@ -1,12 +1,27 @@
 <template>
   <div id="app">
 
-    <y-input value="张三" disabled></y-input>
-    <y-input value="张三" readonly></y-input>
-    <y-input value="李四"></y-input>
-    <y-input value="王五" error="姓名错误"></y-input>
+    <div class="box">
+      <y-input value="张三" disabled></y-input>
+      <y-input value="张三" readonly></y-input>
+      <y-input value="李四"></y-input>
+    </div>
 
-    <div style="margin-top: 20px;">
+    <div class="box">
+      <y-input
+        value="王五"
+        error="姓名不能大于五个字"
+        @change="inputChange"
+      ></y-input>
+    </div>
+
+    <div class="box">
+      <y-input v-model="message"></y-input>
+      <p>{{ message }}</p>
+      <button @click="message+=1">+1</button>
+    </div>
+
+    <div class="box">
       <y-button
         :loading="loading1"
         icon-position="left"
@@ -51,7 +66,13 @@ export default {
     return {
       loading1: true,
       loading2: false,
-      loading3: true
+      loading3: true,
+      message: ''
+    }
+  },
+  methods: {
+    inputChange (v) {
+      console.log(v)
     }
   }
 }
@@ -78,5 +99,9 @@ export default {
 }
 body {
   font-size: var(--font-size);
+}
+
+.box {
+  margin-top: 20px;
 }
 </style>
