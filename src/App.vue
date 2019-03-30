@@ -1,34 +1,43 @@
 <template>
   <div id="app">
-    <y-button
-      :loading="loading1"
-      icon-position="left"
-      @click="loading1 = !loading1"
-    >
-      按钮
-    </y-button>
 
-    <y-button
-      :loading="loading2"
-      icon="settings" icon-position="right"
-      @click="loading2 = !loading2"
-    >
-      按钮
-    </y-button>
+    <y-input value="张三" disabled></y-input>
+    <y-input value="张三" readonly></y-input>
+    <y-input value="李四"></y-input>
+    <y-input value="王五" error="姓名错误"></y-input>
 
-    <y-button
-      :loading="loading3"
-      icon="settings"
-      @click="loading3 = !loading3"
-    >
-      按钮
-    </y-button>
+    <div style="margin-top: 20px;">
+      <y-button
+        :loading="loading1"
+        icon-position="left"
+        @click="loading1 = !loading1"
+      >
+        按钮
+      </y-button>
 
-    <y-button-group>
-      <y-button icon="back">上一页</y-button>
-      <y-button>更多</y-button>
-      <y-button icon="right" icon-position="right">下一页</y-button>
-    </y-button-group>
+      <y-button
+        :loading="loading2"
+        icon="settings" icon-position="right"
+        @click="loading2 = !loading2"
+      >
+        按钮
+      </y-button>
+
+      <y-button
+        :loading="loading3"
+        icon="settings"
+        @click="loading3 = !loading3"
+      >
+        按钮
+      </y-button>
+
+      <y-button-group>
+        <y-button icon="back">上一页</y-button>
+        <y-button>更多</y-button>
+        <y-button icon="right" icon-position="right">下一页</y-button>
+      </y-button-group>
+    </div>
+    
   </div>
 </template>
 
@@ -50,7 +59,7 @@ export default {
 
 <style lang="scss">
 #app {
-  margin-left: 150px;
+  margin-left: 300px;
 }
 * {
   margin: 0;

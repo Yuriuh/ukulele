@@ -1,36 +1,28 @@
-# vue-yui
+# YUI - 一个 Vue UI 组件
 
-Author：Yuriuh
+## 介绍
 
-## Project setup
-```
-npm install
-```
+这是我在学习 Vue 过程中做的一个 UI 框架，希望对你有用。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 开始使用
 
-### Compiles and minifies for production
+1. 安装
+
+使用本框架前，请在 CSS 中开启 border-box
+
 ```
-npm run build
+*,*::before,*::after {box-sizing: border-box;}
 ```
 
-### Run your tests
-```
-npm run test
-```
+IE 8 及以上浏览器都支持此样式。
 
-### Lints and fixes files
-```
-npm run lint
-```
+## 文档
 
-### Run your unit tests
-```
-npm run test:unit
-```
+## 提问
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 变更记录
+
+## 联系方式
+
+## 贡献代码
+
