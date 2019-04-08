@@ -53,7 +53,7 @@
       </y-button-group>
     </div> -->
     
-    <div style="border: 1px solid black">
+    <!-- <div style="border: 1px solid black">
       <y-row gutter="20">
         <y-col
           span="24"
@@ -74,11 +74,23 @@
           <div style="height: 50px;background: pink"></div>
         </y-col>
       </y-row>
+    </div> -->
 
-    </div>
-
+    <!-- <y-layout>
+      <y-header class="demo">header</y-header>
+      <y-content class="demo">content</y-content>
+      <y-footer class="demo">footer</y-footer>
+    </y-layout> -->
+      
+    <y-layout style="height: 100vh">
+      <y-sider>sider</y-sider>
+      <y-layout>
+        <y-header>header</y-header>
+        <y-content>content</y-content>
+        <y-footer>footer</y-footer>
+      </y-layout>
+    </y-layout>
     
-
   </div>
 </template>
 
@@ -107,6 +119,18 @@ export default {
 <style lang="scss">
 #app {
   // margin-left: 300px;
+}
+.sider {
+  background: #333;
+  width: 200px;
+}
+.header {
+  background: #999;
+  height: 100px;
+}
+.footer {
+  background: #ccc;
+  height: 50px;
 }
 * {
   margin: 0;

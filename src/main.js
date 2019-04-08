@@ -6,6 +6,11 @@ import ButtonGroup from './components/Button-Group.vue'
 import Input from './components/Input.vue'
 import Row from './components/grid/Row.vue'
 import Col from './components/grid/Col.vue'
+import Layout from './components/layout/Layout.vue'
+import Header from './components/layout/Header.vue'
+import Content from './components/layout/Content.vue'
+import Sider from './components/layout/Sider.vue'
+import Footer from './components/layout/Footer.vue'
 
 Vue.component('y-button', Button)
 Vue.component('y-icon', Icon)
@@ -13,6 +18,11 @@ Vue.component('y-button-group', ButtonGroup)
 Vue.component('y-input', Input)
 Vue.component('y-row', Row)
 Vue.component('y-col', Col)
+Vue.component('y-layout', Layout)
+Vue.component('y-header', Header)
+Vue.component('y-content', Content)
+Vue.component('y-sider', Sider)
+Vue.component('y-footer', Footer)
 
 Vue.config.productionTip = false;
 
