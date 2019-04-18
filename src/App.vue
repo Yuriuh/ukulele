@@ -82,14 +82,47 @@
       <y-footer class="demo">footer</y-footer>
     </y-layout> -->
       
-    <y-layout style="height: 100vh">
+    <!-- <y-layout style="height: 100vh">
       <y-sider>sider</y-sider>
       <y-layout>
         <y-header>header</y-header>
         <y-content>content</y-content>
         <y-footer>footer</y-footer>
       </y-layout>
-    </y-layout>
+    </y-layout> -->
+
+    <!-- <button @click="showToast('top')">top</button> -->
+    <!-- <button @click="showToast('middle')">middle</button> -->
+    <!-- <button @click="showToast('bottom')">bottom</button> -->
+
+    <!-- <y-tabs :selected="selectedTab" @update:selected="selectedTab = $event"> -->
+    <y-tabs :selected.sync="selectedTab">
+      <y-tabs-head>
+        <template slot="actions">
+          <button>设置</button>
+        </template>
+        <y-tabs-item name="woman" disabled>
+          <y-icon name="settings"></y-icon>美女
+        </y-tabs-item>
+        <y-tabs-item name="finance">
+          财经
+        </y-tabs-item>
+        <y-tabs-item name="sports">
+          体育
+        </y-tabs-item>
+      </y-tabs-head>
+      <y-tabs-body>
+        <y-tabs-pane name="woman">
+          美女相关资讯
+        </y-tabs-pane>
+        <y-tabs-pane name="finance">
+          财经相关资讯
+        </y-tabs-pane>
+        <y-tabs-pane name="sports">
+          体育相关资讯
+        </y-tabs-pane>
+      </y-tabs-body>
+    </y-tabs>
     
   </div>
 </template>
@@ -105,14 +138,34 @@ export default {
       loading1: true,
       loading2: false,
       loading3: true,
-      message: ''
+      message: '',
+      selectedTab: 'sports'
     }
   },
   methods: {
     inputChange (v) {
       console.log(v)
+    },
+    showToast (position) {
+      this.$toast(`你的智商目前为 ${parseInt(Math.random() * 100)}`, {
+        position,
+        enableHtml: false,
+        closeButton: {
+          text: '已充值',
+          callback () {
+            console.log('他说已经充值了智商')
+          }
+        },
+        autoClose: 2
+      })
     }
-  }
+  },
+  created () {
+
+  },
+  mounted() {
+
+  },
 }
 </script>
 

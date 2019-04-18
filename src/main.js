@@ -11,6 +11,14 @@ import Header from './components/layout/Header.vue'
 import Content from './components/layout/Content.vue'
 import Sider from './components/layout/Sider.vue'
 import Footer from './components/layout/Footer.vue'
+import Toast from './components/Toast.vue'
+import Tabs from './components/tabs/Tabs.vue'
+import TabsHead from './components/tabs/Tabs-Head.vue'
+import TabsBody from './components/tabs/Tabs-Body.vue'
+import TabsItem from './components/tabs/Tabs-Item.vue'
+import TabsPane from './components/tabs/Tabs-Pane.vue'
+import plugin from "./components/plugin";
+
 
 Vue.component('y-button', Button)
 Vue.component('y-icon', Icon)
@@ -23,6 +31,13 @@ Vue.component('y-header', Header)
 Vue.component('y-content', Content)
 Vue.component('y-sider', Sider)
 Vue.component('y-footer', Footer)
+Vue.component('y-toast', Toast)
+Vue.component('y-tabs', Tabs)
+Vue.component('y-tabs-head', TabsHead)
+Vue.component('y-tabs-body', TabsBody)
+Vue.component('y-tabs-item', TabsItem)
+Vue.component('y-tabs-pane', TabsPane)
+Vue.use(plugin)
 
 Vue.config.productionTip = false;
 
