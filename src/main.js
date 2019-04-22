@@ -17,6 +17,7 @@ import TabsHead from './components/tabs/Tabs-Head.vue'
 import TabsBody from './components/tabs/Tabs-Body.vue'
 import TabsItem from './components/tabs/Tabs-Item.vue'
 import TabsPane from './components/tabs/Tabs-Pane.vue'
+import Popover from './components/Popover.vue'
 import plugin from "./components/plugin";
 
 
@@ -37,6 +38,7 @@ Vue.component('y-tabs-head', TabsHead)
 Vue.component('y-tabs-body', TabsBody)
 Vue.component('y-tabs-item', TabsItem)
 Vue.component('y-tabs-pane', TabsPane)
+Vue.component('y-popover', Popover)
 Vue.use(plugin)
 
 Vue.config.productionTip = false;

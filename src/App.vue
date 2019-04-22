@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="margin-top: 200px">
 
     <!-- <div class="box">
       <y-input value="张三" disabled></y-input>
@@ -96,7 +96,7 @@
     <!-- <button @click="showToast('bottom')">bottom</button> -->
 
     <!-- <y-tabs :selected="selectedTab" @update:selected="selectedTab = $event"> -->
-    <y-tabs :selected.sync="selectedTab">
+    <!-- <y-tabs :selected.sync="selectedTab">
       <y-tabs-head>
         <template slot="actions">
           <button>设置</button>
@@ -122,7 +122,32 @@
           体育相关资讯
         </y-tabs-pane>
       </y-tabs-body>
-    </y-tabs>
+    </y-tabs> -->
+
+    <y-popover>
+      <y-button>上方弹出</y-button>
+      <template slot="content">
+        弹出内容
+      </template>
+    </y-popover>
+    <y-popover position="bottom">
+      <y-button>下方弹出</y-button>
+      <template slot="content">
+        弹出内容
+      </template>
+    </y-popover>
+    <y-popover position="left">
+      <y-button>左边弹出</y-button>
+      <template slot="content">
+        弹出内容
+      </template>
+    </y-popover>
+    <y-popover position="right">
+      <y-button>右边弹出</y-button>
+      <template slot="content">
+        弹出内容
+      </template>
+    </y-popover>
     
   </div>
 </template>
