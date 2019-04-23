@@ -7,16 +7,19 @@
     <y-icon v-if="icon && !loading" class="icon" :name="icon"></y-icon>
     <y-icon v-if="loading" class="loading icon" name="loading"></y-icon>
     <!-- slot 不能加 class, 所以包一层 div -->
-    <div class="content">
+    <div class="y-button-content">
       <slot></slot>
     </div>
   </button>
 </template>
 
 <script>
+import YIcon from './Icon'
 export default {
-  // props: ['icon', 'iconPosition']
   name: 'YButton',
+  components: {
+    YIcon
+  },
   props: {
     icon: {},
     loading: {
@@ -41,7 +44,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import "_var";
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -51,28 +55,27 @@ export default {
   }
 }
 .y-button {
-  font-size: var(--font-size);
-  height: var(--button-height);
-  padding: 0 1em;
-  font: inherit;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  background: var(--button-bg);
   display: inline-flex;
+  font-size: $font-size;
+  height: $button-height;
+  padding: 0 1em;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background: $button-bg;
   justify-content: center;
   align-items: center;
   // 解决 inline 元素垂直位置不对齐的问题
   vertical-align: middle;
   &:hover {
-    border-color: var(--border-color-hover);
+    border-color: $border-color-hover;
   }
   &:active {
-    background-color: var(--button-active-bg);
+    background-color: $button-active-bg;
   }
   &:focus {
     outline: none;
   }
-  > .content {
+  > .y-button-content {
     order: 2;
   }
   > .icon {
@@ -81,7 +84,7 @@ export default {
   }
   // 让图标在右
   &.icon-right {
-    > .content {
+    > .y-button-content {
       order: 1;
     }
     > .icon {
@@ -91,7 +94,7 @@ export default {
     }
   }
   .loading {
-    animation: spin 1.4s infinite linear;
+    @include spin;
   }
 }
 </style>

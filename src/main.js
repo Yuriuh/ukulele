@@ -18,6 +18,8 @@ import TabsBody from './components/tabs/Tabs-Body.vue'
 import TabsItem from './components/tabs/Tabs-Item.vue'
 import TabsPane from './components/tabs/Tabs-Pane.vue'
 import Popover from './components/Popover.vue'
+import Collapse from './components/collapse/Collapse.vue'
+import CollapseItem from './components/collapse/Collapse-Item.vue'
 import plugin from "./components/plugin";
 
 
@@ -39,6 +41,8 @@ Vue.component('y-tabs-body', TabsBody)
 Vue.component('y-tabs-item', TabsItem)
 Vue.component('y-tabs-pane', TabsPane)
 Vue.component('y-popover', Popover)
+Vue.component('y-collapse', Collapse)
+Vue.component('y-collapse-item', CollapseItem)
 Vue.use(plugin)
 
 Vue.config.productionTip = false;

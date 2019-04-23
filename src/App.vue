@@ -1,5 +1,5 @@
 <template>
-  <div id="app" style="margin-top: 200px">
+  <div id="app" style="margin-top: 200px; padding: 0 100px 0 100px">
 
     <!-- <div class="box">
       <y-input value="张三" disabled></y-input>
@@ -13,13 +13,13 @@
         error="姓名不能大于五个字"
         @change="inputChange"
       ></y-input>
-    </div>
+    </div> -->
 
-    <div class="box">
+    <!-- <div class="box">
       <y-input v-model="message"></y-input>
       <p>{{ message }}</p>
       <button @click="message+=1">+1</button>
-    </div>
+    </div> -->
 
     <div class="box">
       <y-button
@@ -51,7 +51,7 @@
         <y-button>更多</y-button>
         <y-button icon="right" icon-position="right">下一页</y-button>
       </y-button-group>
-    </div> -->
+    </div>
     
     <!-- <div style="border: 1px solid black">
       <y-row gutter="20">
@@ -124,7 +124,7 @@
       </y-tabs-body>
     </y-tabs> -->
 
-    <y-popover>
+    <!-- <y-popover>
       <y-button>上方弹出</y-button>
       <template slot="content">
         弹出内容
@@ -147,7 +147,13 @@
       <template slot="content">
         弹出内容
       </template>
-    </y-popover>
+    </y-popover> -->
+
+    <y-collapse :selected.sync="selectedTab">
+      <y-collapse-item title="标题1" name="1">内容1</y-collapse-item>
+      <y-collapse-item title="标题2" name="2">内容2</y-collapse-item>
+      <y-collapse-item title="标题3" name="3">内容3</y-collapse-item>
+    </y-collapse>
     
   </div>
 </template>
@@ -156,7 +162,7 @@
 export default {
   name: "app",
   components: {
-
+    
   },
   data () {
     return {
@@ -164,7 +170,9 @@ export default {
       loading2: false,
       loading3: true,
       message: '',
-      selectedTab: 'sports'
+      // selectedTab: 'sports'
+      selectedTab: ['1', '2'],
+      items: [1,2,3]
     }
   },
   methods: {
