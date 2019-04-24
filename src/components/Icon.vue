@@ -1,5 +1,5 @@
 <template>
-  <svg class="y-icon">
+  <svg class="y-icon" @click="$emit('click', $event)">
     <use :xlink:href="`#i-${name}`"></use>
   </svg>
 </template>
@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .y-icon {
   width: 1em;
   height: 1em;
