@@ -1,5 +1,5 @@
 <template>
-  <div class="collapes">
+  <div class="collapse">
     <slot></slot>    
   </div>
 </template>

@@ -73,7 +73,7 @@ export default {
     },
     removePopoverListeners () {
       if (this.trigger === 'click') {
-        this.$refs.popover.removeListener('click', this.onClick)
+        this.$refs.popover.removeEventListener('click', this.onClick)
       } else {
         this.$refs.popover.removeEventListener('mouseenter', this.open)
         this.$refs.popover.removeEventListener('mouseenter', this.close)
@@ -105,9 +105,9 @@ export default {
       contentWrapper.style.top = position[this.position].top + 'px'
     },
     onClickDocument (e) {
-      let self = e.target
-      let popover = this.$refs.popover
-      let contentWrapper = this.$refs.contentWrapper
+      var self = e.target
+      var popover = this.$refs.popover
+      var contentWrapper = this.$refs.contentWrapper
       if (popover && (popover === self || popover.contains(self))) {
         return
       }

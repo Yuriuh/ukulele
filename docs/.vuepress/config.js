@@ -1,7 +1,7 @@
 const path = require('path')
 module.exports = {
   base: '/ukulele/',
-  title: 'ukulele UI',
+  title: 'Ukulele UI',
   description: '一个好用的 UI 框架',
   themeConfig: {
     nav: [
@@ -23,6 +23,14 @@ module.exports = {
         collapsable: false,
         children: [
           '/components/button',
+          '/components/tabs',
+          'components/input',
+          'components/grid',
+          'components/layout',
+          'components/toast',
+          'components/popover',
+          'components/collapse',
+          'components/updating',
         ]
       }
     ]

@@ -21,7 +21,7 @@
       <button @click="message+=1">+1</button>
     </div> -->
 
-    <div class="box">
+    <!-- <div class="box">
       <y-button
         :loading="loading1"
         icon-position="left"
@@ -51,7 +51,7 @@
         <y-button>更多</y-button>
         <y-button icon="right" icon-position="right">下一页</y-button>
       </y-button-group>
-    </div>
+    </div> -->
     
     <!-- <div style="border: 1px solid black">
       <y-row gutter="20">
@@ -154,6 +154,8 @@
       <y-collapse-item title="标题2" name="2">内容2</y-collapse-item>
       <y-collapse-item title="标题3" name="3">内容3</y-collapse-item>
     </y-collapse>
+
+    
     
   </div>
 </template>

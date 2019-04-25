@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: 16px;">
+  <div style="padding-top: 16px;">
     <y-button>默认按钮</y-button>
     <y-button icon="settings">图标按钮</y-button>
     <y-button :loading="true">加载按钮</y-button>
