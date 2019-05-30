@@ -1,7 +1,7 @@
 <template>
   <div id="app" style="margin-top: 200px; padding: 0 100px 0 100px">
 
-    <!-- <div class="box">
+    <div class="box">
       <y-input value="张三" disabled></y-input>
       <y-input value="张三" readonly></y-input>
       <y-input value="李四"></y-input>
@@ -13,7 +13,7 @@
         error="姓名不能大于五个字"
         @change="inputChange"
       ></y-input>
-    </div> -->
+    </div>
 
     <!-- <div class="box">
       <y-input v-model="message"></y-input>
@@ -149,11 +149,11 @@
       </template>
     </y-popover> -->
 
-    <y-collapse :selected.sync="selectedTab">
+    <!-- <y-collapse :selected.sync="selectedTab">
       <y-collapse-item title="标题1" name="1">内容1</y-collapse-item>
       <y-collapse-item title="标题2" name="2">内容2</y-collapse-item>
       <y-collapse-item title="标题3" name="3">内容3</y-collapse-item>
-    </y-collapse>
+    </y-collapse> -->
 
     
     
@@ -206,7 +206,7 @@ export default {
 
 <style lang="scss">
 #app {
-  // margin-left: 300px;
+  margin-left: 300px;
 }
 .sider {
   background: #333;
